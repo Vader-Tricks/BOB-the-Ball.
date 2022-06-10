@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/TextFont/Crosterian.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scrips/PlayButton.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_size = 1
+outline_color = Color( 1, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1024.0
+margin_bottom = -600.0
+rect_scale = Vector2( 15, 15 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 170.0
+margin_bottom = 96.0
+color = Color( 0.152941, 0.27451, 0.372549, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 0.466667
+margin_top = 21.9333
+margin_right = 588.467
+margin_bottom = 87.9333
+rect_scale = Vector2( 0.3, 0.3 )
+hint_tooltip = "This is a Third person game that is called \"BOB the Ball\"!
+Made by:
+	Drake.R
+	Blender
+	Godot
+	bornCG
+Have Fun!"
+mouse_filter = 1
+custom_colors/font_color = Color( 0, 0.0862745, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Bob the Ball"
+align = 1
+valign = 1
+
+[node name="PlayButton" type="Button" parent="."]
+margin_left = 66.8
+margin_top = 57.2667
+margin_right = 143.8
+margin_bottom = 82.2667
+rect_scale = Vector2( 0.5, 0.5 )
+hint_tooltip = "This starts your game."
+custom_colors/font_color = Color( 0.588235, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.219608, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.478431, 0.0235294, 0.447059, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Play!"
+flat = true
+script = ExtResource( 2 )
+
+[connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_PlayButton_pressed"]
