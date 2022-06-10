@@ -10,6 +10,7 @@ font_data = ExtResource( 2 )
 [node name="Control" type="Control"]
 margin_right = 40.0
 margin_bottom = 40.0
+rect_scale = Vector2( 0.406, 0.43 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 2560.0

@@ -17,7 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -1024.0
 margin_bottom = -600.0
-rect_scale = Vector2( 15, 15 )
+rect_scale = Vector2( 6.061, 6.289 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 170.0
